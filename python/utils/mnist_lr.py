@@ -4,7 +4,7 @@ from keras.datasets import mnist
 from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 
-def mnist_model_classification(normalization=False):
+def mnist_model_classification(normalization=False, dimensionality_reduction=None):
     (x_train, y_train), (x_test, y_test) = mnist.load_data()
     
     if normalization:
@@ -22,6 +22,10 @@ def mnist_model_classification(normalization=False):
     
     x_train = x_train.reshape(-1, 28*28)
     x_test = x_test.reshape(-1, 28*28)
+
+    if dimensionality_reduction:
+        x_train = dimensionality_reduction.fit_transform(x_train)
+        x_test = dimensionality_reduction.fit_transform(x_test)
     
     logistic_regression = LogisticRegression(random_state=2)
     
