@@ -1,10 +1,15 @@
 import numpy as np
+import warnings
+import matplotlib.pyplot as plt
 
 from keras.datasets import mnist
 from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 
-def mnist_model_classification(normalization=False, dimensionality_reduction=None):
+warnings.simplefilter('ignore')
+
+
+def mnist_model_classification(normalization=False, dimensionality_reduction=None, plot=False):
     (x_train, y_train), (x_test, y_test) = mnist.load_data()
     
     if normalization:
@@ -27,6 +32,12 @@ def mnist_model_classification(normalization=False, dimensionality_reduction=Non
         x_train = dimensionality_reduction.fit_transform(x_train)
         x_test = dimensionality_reduction.fit_transform(x_test)
     
+    if plot:
+        x = x_train[:,0]
+        y = x_train[:,1]
+        plt.scatter(x, y, c=y_train, cmap='viridis')
+        plt.show()
+
     logistic_regression = LogisticRegression(random_state=2)
     
     logistic_regression.fit(x_train, y_train)

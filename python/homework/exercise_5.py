@@ -1,6 +1,6 @@
 from python.utils.mnist_lr import mnist_model_classification
 
-if __name__ == '__main__':
+def executor():
     # Model without processing
     mnist_model_classification()
 

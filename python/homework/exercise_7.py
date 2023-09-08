@@ -4,7 +4,7 @@ from sklearn.manifold import TSNE
 
 from python.utils.mnist_lr import mnist_model_classification
 
-if __name__ == '__main__':
+def executor():
 
     svd = TruncatedSVD(n_components=2)
     print('Sklearn SVD')
