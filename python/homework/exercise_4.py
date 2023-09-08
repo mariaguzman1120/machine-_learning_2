@@ -7,7 +7,7 @@ from python.metadata.path import Path
 # Apply SVD over the picture of your face, progressively increasing 
 # the number of singular values used.
 
-if __name__ == '__main__':
+def executor():
     picture = transform_image(Path.picture)
 
     fig, axes = plt.subplots(2, 5, figsize=(12, 6))

@@ -7,7 +7,7 @@ from python.utils.image_processing import read_images
 from python.utils.image_processing import transform_image
 from python.metadata.responses import Responses
 
-if __name__ == '__main__':
+def executor():
 
     picture = transform_image(Path.picture)
 

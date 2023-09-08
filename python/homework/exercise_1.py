@@ -2,7 +2,7 @@ from python.utils.algebra import Matrix
 from python.metadata.responses import Responses
 
 
-if __name__ == '__main__':
+def executor():
 
     # Simulate any random rectangular matrix A.
     matrix = Matrix(6, 6, 50)
@@ -11,14 +11,14 @@ if __name__ == '__main__':
 
     # What is the rank and trace of A?
     matrix_rank = matrix.calculate_rank()
-    print(matrix_rank)
+    print(f'Rank matrix is: {matrix_rank}')
 
     trace_matrix = matrix.calculate_trace()
-    print(trace_matrix)
+    print(f'The trace matrix is: {trace_matrix}')
 
     # What is the determinant of A?
-    determinant = matrix.determinant_matrix()
-    print(determinant)
+    determinant = matrix.determinant_matrix(matrix_a)
+    print(f'The determinant is: {determinant}')
 
     # Can you invert A? How?
     if determinant != 0:

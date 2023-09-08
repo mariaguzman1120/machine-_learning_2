@@ -6,6 +6,7 @@ class Matrix:
         self.row = row
         self.column = column
         self.max_value = max_value
+        self.matrix = None
 
     def generate_matrix(self) -> np.array:
         """Create a random matrix with the specified number of rows and columns.
@@ -15,8 +16,9 @@ class Matrix:
             ranging from 0 to 99 (inclusive).
 
         """
-        matrix = np.random.randint(self.max_value, size=(self.row, self.column))
-        return matrix
+        self.matrix = np.random.randint(self.max_value, size=(self.row, self.column))
+        
+        return self.matrix
     
     def calculate_rank(self) -> int:
         """Calculate the rank of a 2D NumPy array by returning
@@ -39,10 +41,10 @@ class Matrix:
             diagonal elements.
 
         """
-        new_matrix = self.generate_matrix()
+        new_matrix = self.matrix
         trace = new_matrix[0][0]
 
-        for i in range(1, new_matrix(new_matrix)):
+        for i in range(1, min(new_matrix.shape[0], new_matrix.shape[1])):
             trace = trace + new_matrix[i][i]
 
         return trace
@@ -69,7 +71,7 @@ class Matrix:
             if i != drop_row]
 
 
-    def determinant_matrix(self) -> int:
+    def determinant_matrix(self, matrix) -> int:
         """Calculate the determinant of a square 2D NumPy array.
 
         Args:
@@ -80,7 +82,7 @@ class Matrix:
             The determinant of the input square matrix.
 
         """
-        new_matrix = self.generate_matrix()
+        new_matrix = matrix
 
         # Get the number of rows and columns of the matrix
         n = len(new_matrix)

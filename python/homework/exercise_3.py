@@ -1,5 +1,5 @@
 import unsupervised
 
 
-if __name__ == '__main__':
+def executor():
     print(unsupervised.__version__)
