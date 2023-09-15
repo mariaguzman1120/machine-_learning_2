@@ -5,7 +5,7 @@ from sklearn.datasets import make_blobs
 from unsupervised.clustering import KMeans, KMedoids
 from python.utils.silhouette import plot_silhouette_comparison
 
-def executore():
+def executor():
     X, y = make_blobs(
         n_samples=500,
         n_features=2,
