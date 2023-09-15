@@ -1,9 +1,10 @@
 # External libraries
 import matplotlib.pyplot as plt
-
 from sklearn.datasets import make_blobs
 from unsupervised.clustering import KMeans, KMedoids
+
 from python.utils.silhouette import plot_silhouette_comparison
+
 
 def executor():
     X, y = make_blobs(

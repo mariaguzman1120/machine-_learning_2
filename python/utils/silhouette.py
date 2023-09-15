@@ -1,7 +1,6 @@
 # External libraries
 import matplotlib.pyplot as plt
 import numpy as np
-
 from sklearn.metrics import silhouette_samples, silhouette_score
 
 

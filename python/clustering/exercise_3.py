@@ -1,10 +1,8 @@
 import matplotlib.pyplot as plt
-
 from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
 
 from python.metadata.responses import Responses
-
 
 """
 The elbow method is a graphical method for finding the 
