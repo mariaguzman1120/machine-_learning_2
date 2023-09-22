@@ -1,9 +1,10 @@
-import numpy as np
 import os
 
+import numpy as np
 from skimage import io
-from skimage.transform import resize
 from skimage.color import rgb2gray
+from skimage.transform import resize
+
 
 def transform_image(path:str) -> np.array:
     """Convert an image located at 'path_read' to grayscale, resize it to

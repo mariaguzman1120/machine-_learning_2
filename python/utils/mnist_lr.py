@@ -1,10 +1,10 @@
-import numpy as np
 import warnings
-import matplotlib.pyplot as plt
 
+import matplotlib.pyplot as plt
+import numpy as np
 from keras.datasets import mnist
-from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
+from sklearn.linear_model import LogisticRegression
 
 warnings.simplefilter('ignore')
 
