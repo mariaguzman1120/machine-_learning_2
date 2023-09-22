@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
 from skimage import io
+
 from python.metadata.path import Path
-from python.utils.image_processing import read_images
-from python.utils.image_processing import transform_image
 from python.metadata.responses import Responses
+from python.utils.image_processing import read_images, transform_image
+
 
 def executor():
 

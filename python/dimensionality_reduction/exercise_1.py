@@ -1,5 +1,5 @@
-from python.utils.algebra import Matrix
 from python.metadata.responses import Responses
+from python.utils.algebra import Matrix
 
 
 def executor():

@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
+from keras.datasets import mnist
 
 from python.utils.robustpca import RobustPCA
-from keras.datasets import mnist
+
 
 def executor():
     (x_train, y_train), (x_test, y_test) = mnist.load_data()

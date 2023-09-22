@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
-
 from unsupervised.dimensionality_reduction import SVD
-from python.utils.image_processing import transform_image
+
 from python.metadata.path import Path
+from python.utils.image_processing import transform_image
 
 # Apply SVD over the picture of your face, progressively increasing 
 # the number of singular values used.

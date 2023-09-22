@@ -1,7 +1,7 @@
-from unsupervised.dimensionality_reduction import SVD
-from unsupervised.dimensionality_reduction import PCA
-from unsupervised.dimensionality_reduction import TSNE
+from unsupervised.dimensionality_reduction import PCA, SVD, TSNE
+
 from python.utils.mnist_lr import mnist_model_classification
+
 
 def executor():
 
